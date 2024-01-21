@@ -17,7 +17,7 @@ export default function Home() {
 
   useEffect(() => {
 
-    axios.get('http://localhost:4002/cryptocurrencies')
+    axios.get('https://nextjscurrency.onrender.com/cryptocurrencies')
       .then(response => setCryptos(response.data))
       .catch(error => console.error('Error fetching cryptocurrencies:', error));
 
@@ -35,7 +35,7 @@ export default function Home() {
     e.preventDefault();
 
 
-    axios.get('http://localhost:4002/convert', {
+    axios.get('https://nextjscurrency.onrender.com/convert', {
       params: {
         sourceCrypto,
         amount,
